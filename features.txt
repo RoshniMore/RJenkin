@@ -1,0 +1,48 @@
+Feature: Configure optional fields
+
+Scenario: Verify Optional fields page
+
+	Given user is on orangehrm dashboard
+	When user navigate to configuration and click on optional fields
+	Then Configure PIM page is displayed
+
+Scenario: Verify to edit optional field 
+
+	Given user is on Configure PIM page
+	When user clicks on edit button 
+	And select the options from checklist and click on save
+	Then fields should be saved
+
+--------------------------------------------------------------------------------
+
+Feature: Configure Custom fields
+
+Scenario: Verify add custom fields page
+
+	When user navigate to configuration from dashboard
+	And click on custom fields
+	Then defined custom fields page displayed
+
+
+Scenario: Verify to save a new custom fields with missing required fields
+	
+	Given user is on custom fields page
+	When user clicks button add, enter fieldname and clicks on save
+	Then required message should be displayed
+
+Scenario: Verify to save a new custom fields
+	
+	When user enter screen type and clicks on save
+	Then custom field should be added
+
+Scenario: Verify to delete custom field 
+
+	When user selects custom field
+	And clicks on delete button and click on okay in alert 
+	Then custom field should be deleted
+
+
+
+
+
+	
