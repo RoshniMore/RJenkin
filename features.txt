@@ -1,4 +1,4 @@
-Feature: Configure optional fields
+Feature : Configure optional fields
 
 Scenario: Verify Optional fields page
 
